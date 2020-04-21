@@ -1,0 +1,53 @@
+@lego-prefix: ~'ant';
+@lego-editInput-prefix-cls: ~'@{lego-prefix}-editInput';
+
+.@{lego-editInput-prefix-cls}-editInputBox {
+  input.@{lego-prefix}-input {
+    width: calc(100% - 75px) !important;
+    &.@{lego-prefix}-input-disabled {
+      border: none;
+      background: none;
+      color: #333;
+      cursor: default;
+      padding: 4px 0;
+      text-overflow: ellipsis;
+    }
+  }
+  .@{lego-editInput-prefix-cls}-editBtn {
+    visibility: hidden;
+  }
+  .@{lego-editInput-prefix-cls}-editSwitch {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin-left: 10px;
+    .@{lego-editInput-prefix-cls}-confirmBtn {
+      margin-right: 10px;
+    }
+    .@{lego-editInput-prefix-cls}-cancelBtn {
+      position: relative;
+      top: -2px;
+    }
+    svg {
+      cursor: pointer;
+      font-size: 14px;
+    }
+  }
+  &:hover {
+    .@{lego-editInput-prefix-cls}-editBtn {
+      visibility: visible;
+    }
+  }
+}
+.@{lego-editInput-prefix-cls}-tooltip {
+  color: #fff;
+  max-width: 320px;
+  .@{lego-prefix}-tooltip-inner {
+    background-color: rgba(2,22,55,.8);
+    border-radius: 3px;
+    padding: 10px;
+    line-height: 17px;
+    box-shadow: 0 2px 8px rgba(2,22,55,.15);
+    letter-spacing: 1px;
+  }
+}

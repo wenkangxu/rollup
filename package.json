@@ -1,0 +1,146 @@
+{
+  "name": "@crm/EditInput",
+  "version": "1.0.3",
+  "main": "lib/EditInput.cjs.js",
+  "module": "lib/EditInput.esm.js",
+  "unpkg": "lib/EditInput.min.js",
+  "keywords": [
+    "rollup",
+    "babel",
+    "starter"
+  ],
+  "author": "maoquan<maoquan0515@163.com>",
+  "license": "MIT",
+  "scripts": {
+    "pinstall": "cross-env npm_config_iltorb_binary_host=http://168.61.8.90:8080/iltorb yarn install",
+    "cz": "git-cz",
+    "clean": "rimraf lib",
+    "start": "yarn run clean && cross-env NODE_ENV=development rollup -w -c scripts/rollup.config.dev.js",
+    "build": "yarn run clean && cross-env NODE_ENV=production rollup -c scripts/rollup.config.prod.js",
+    "test": "jest",
+    "serve": "serve -p 8080",
+    "release": "standard-version"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "files": [
+    "src",
+    "lib"
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,mjs}"
+    ],
+    "setupFiles": [
+      "<rootDir>/src/setupTests.js"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/.cssTransform.jest.js",
+      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/.fileTransform.jest.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+    ],
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node",
+      "mjs"
+    ]
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "antd": "^3.15.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-external-helpers": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-stage-2": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "@babel/runtime": "^7.3.4",
+    "@babel/runtime-corejs2": "^7.0.0",
+    "@commitlint/cli": "^5.2.8",
+    "@commitlint/config-conventional": "^5.2.3",
+    "@svgr/rollup": "^4.3.2",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-import": "^1.11.2",
+    "cross-env": "^5.1.3",
+    "cssnano": "^4.1.10",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.10.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.13.0",
+    "husky": "^2.3.0",
+    "jest": "^24.1.0",
+    "less": "^3.9.0",
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.17.1",
+    "rimraf": "^2.6.2",
+    "rollup": "^1.12.1",
+    "rollup-plugin-alias": "^1.5.1",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-cjs-es": "^0.7.0",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-cpy": "^1.1.0",
+    "rollup-plugin-eslint": "^5.1.0",
+    "rollup-plugin-filesize": "^6.0.1",
+    "rollup-plugin-image": "^1.0.2",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-react-svg": "^3.0.3",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-svg-sprite": "^1.0.0",
+    "rollup-plugin-svg-to-symbol": "^1.0.0",
+    "rollup-plugin-svgo": "^1.0.3",
+    "rollup-plugin-uglify": "^6.0.2",
+    "serve": "^10.0.2",
+    "standard-version": "^4.3.0",
+    "uglify-es": "^3.3.4"
+  },
+  "peerDependencies": {
+    "antd": "^3.15.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "prop-types": "^15.7.2"
+  }
+}

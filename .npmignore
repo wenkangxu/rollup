@@ -1,0 +1,9 @@
+.idea
+.vscode
+*.sublime-project
+*.sublime-workspace
+jsconfig.json
+package-lock.json
+yarn.lock
+.git
+node_modules
