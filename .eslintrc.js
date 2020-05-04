@@ -3,17 +3,12 @@ module.exports = {
   parser: "babel-eslint",
   extends: ["airbnb", "prettier"],
   plugins: [
-    "react",
-    "jsx-a11y",
     "import",
     "prettier"
   ],
   parserOptions : {
     ecmaVersion: 6,
     sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-    }
   },
   rules: {
     "prettier/prettier": "error",
@@ -25,23 +20,6 @@ module.exports = {
     "comma-dangle": ["error", "always-multiline"],
     "class-methods-use-this": "off",
     "no-use-before-define": "error",
-    "react/jsx-filename-extension": "off",
-    "react/jsx-no-target-blank": "off",
-    "react/require-extension": "off",
-    "react/display-name": "off",
-    "react/no-access-state-in-setstate": "error",
-    "react/no-danger": "warn",
-    "react/no-danger-with-children": "error",
-    "react/no-deprecated": "error",
-    "react/no-multi-comp": "error",
-    "react/prop-types": "error",
-    "react/self-closing-comp": "error",
-    "react/style-prop-object": "error",
-    "react/require-default-props": "error",
-    "react/forbid-prop-types": "off",
-    "react/prefer-stateless-function": "off",
-    "react/no-danger": [1],
-    "react/destructuring-assignment": [1],
     "import/imports-first": ["error"],
     "import/no-extraneous-dependencies": "off",
     "import/prefer-default-export": "off",
@@ -50,8 +28,6 @@ module.exports = {
     "import/newline-after-import": "error",
     'global-require': "off",
     'no-underscore-dangle': "off",
-    "jsx-a11y/click-events-have-key-events": "off",
-    "jsx-a11y/no-static-element-interactions": "off"
   },
   env: {
     browser: true,

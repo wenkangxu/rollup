@@ -3,9 +3,11 @@ import serve from 'rollup-plugin-serve';
 import baseConfig from './rollup.config.base';
 import { name } from '../package.json';
 
-const REACT_GLOBALS = {
-  react: 'React',
-  'react-dom': 'ReactDOM',
+const GLOBALS = {
+  'lodash': '_',
+  'bowser': 'bowser',
+  'query-string': 'qs',
+  'warning': 'warning',
 };
 
 export default [
@@ -18,7 +20,7 @@ export default [
         format: 'umd',
         name,
         sourcemap: true,
-        globals: REACT_GLOBALS,
+        globals: GLOBALS,
       },
     ],
     plugins: [

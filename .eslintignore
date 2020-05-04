@@ -1,5 +1,7 @@
 build/*.js
 dist/*.js
+lib/*.js
 temp/*.js
 examples/*.js
 rollup.config.*.js
+package.json
