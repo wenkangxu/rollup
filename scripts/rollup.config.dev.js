@@ -8,6 +8,7 @@ const GLOBALS = {
   'bowser': 'bowser',
   'query-string': 'qs',
   'warning': 'warning',
+  "moment": 'moment',
 };
 
 export default [

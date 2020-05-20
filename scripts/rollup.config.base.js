@@ -22,8 +22,8 @@ export default {
       exclude: 'node_modules/**', // only transpile our source code
     }),
   ],
-//   external: ['lodash', 'bowser', 'query-string', 'warning'],
-  external: id => (
-    /^babel|^lodash|^bowser|^query-string|^warning/.test(id)
-  ),
+  external: ['lodash', 'bowser', 'query-string', 'warning', 'moment'],
+//   external: id => (
+//     /^babel|^lodash|^bowser|^query-string|^warning/.test(id)
+//   ),
 };
