@@ -117,7 +117,7 @@
     "rollup-plugin-serve": "^1.0.1",
     "rollup-plugin-uglify": "^6.0.2",
     "serve": "^10.0.2",
-    "standard-version": "^4.3.0",
+    "standard-version": "^8.0.1",
     "uglify-es": "^3.3.4"
   },
   "peerDependencies": {}
